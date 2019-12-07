@@ -3,7 +3,10 @@ node_js:
 - node
 script:
   - npm run lint
+after_success:
   - npm run deploy
+before_script:
+   - npm install -g firebase-tools
 notifications:
   email: false
 branches:
